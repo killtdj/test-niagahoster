@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.feed-heading > span {
+    font-size: 14px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.contact-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 14px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.contact-heading .telpon {
+    margin-right: 20px;
+}
+
+.contact-heading .live-chat {
+    margin-right: 20px;
+}
+
+.img-logo {
+    margin-top: 12px;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 27px;
+    margin-top: 10px;
+}
+
+.navbar-toggler-icon {
+    color: #333;
+}
+
+.divider {
+    width: 100%;
+    color: #ddd;
+    border-bottom: 1px solid;
+    margin-top: 15px;
+}
+
+.divider-space {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px
+}
+
+.hero-start {
+    margin-top: 50px !important;
+}
+
+.hero-start h1 {   
+    font-weight: 800;
+}
+
+.hero-start p {   
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.fa-ul > li { 
+    padding: 5px 0px; 
+    padding-left: 0;
+}
+
+.hero-second {
+    margin-top: 43px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+    column-gap: 20px;
+}
+
+.icons-text p {
+    text-align: center
+}
+
+.header-paket {
+    margin-top: 75px;
+}
+
+.price-box {
+    background-color: blue;
+    height: 657px;
+}
+
+.description-price{
+    margin-top: 70px;
+}
+
+.description-box {
+    margin-top: 20px;
+}
+
+.table td, .table th {
+    border: none;
+}
+
+.divider-small {
+    width: 87px;
+    border-bottom: 7px solid #eaeaea;
+    margin: auto
+}
+
+.section-title-bold {
+    font-weight: bold; 
+    font-size: 29px;
+}
+
+.section-title {
+    font-weight: regular; 
+    font-size: 29px;
+}
+
+.section-sub-title {
+    font-size: 23px;
+}
+
+.section-note {
+    font-size: 10px;
+}
+
+.card {
+    margin-top: 30px;
+    text-align: center;
+    border:none !important;
+}
+
+.card .img-section {
+    width: 65px;
+    height: auto;
+    margin: 30px;
+}
+
+.card .card-title {
+    font-weight: bold;
+}
+
+.card .card-text {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.image-center {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.card-body .img-card {
+    height: 180px;
+}
+
+.support-laravel .fa-ul > li {
+    font-size: 14px;
+}
+
+.button-pilih {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    padding: 10px 25px !important;
+}
+
+.section-second {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btn-selengkapnya {
+    margin-top: 20px;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    padding: 10px 25px !important;
+}
+
+.section-start span {   
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.share-social-section {
+    background-color: #eaeaea;
+    height: 80px;
+    font-size: 16px;
+}
+
+.share-social-section span {
+    font-size: 16px;
+}
+
+.share-social-section .social-media {
+    margin-left: 10px;
+}
+
+.support-contact-section {
+    background-color: #00A2F3;
+    height: 177px;
+    min-height: 177px;
+}
+
+.support-contact-caption {
+    font-size: 32px;
+    color: white;
+}
+
+.support-contact-section .button-support {
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.social-count {
+    border: 1px solid grey;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.footer-section-1 {
+    background-color: #303030;
+    min-height: 713px;
+    color: white;
+}
+
+.footer-section-1 ul {
+    list-style:none;
+    padding-left: 0;
+}
+
+.footer-section-1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-section-1 a:hover {
+    text-decoration: none;
+    color: grey;
+}
+
+.footer-section-1 .menu-header-footer {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-section-2 {
+    background-color: #303030;
+    min-height: 97px;
+    border-top: 2px solid;
+}
+
+.footer-section-2 span {
+    color: grey;
+    font-size: 12px
+}
+
+.footer-section-2 a {
+    text-decoration: none;
+    color: grey
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    display: flex;
+    align-items: center;
+}
+
+#newsletter form {
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 50px;
+    text-align: left;
+}
+#newsletter form input[type="email"] {
+    border: 0;
+    padding: 4px 8px;
+    width: calc(100% - 100px);
+}
+#newsletter form input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 14px;
+    padding: 0 10px;
+    background: #00A2F3;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+#newsletter form input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+#newsletter span {
+    color: grey;
+    font-size: 12px;
+}
+
+.social-media-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-between;
+}
+
+.social-media-footer .facebook {
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 15px 19px;
+    margin-right: 20px;
+}
+
+.social-media-footer i {
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.social-media-footer i:hover {
+    background-color: #00A2F3;
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .feed-heading {
+        display: none
+    }
+
+    .table img {
+        width: 80px;
+    }
+
+    .table .caption-text {
+        display: none
+    }
+
+    .share-social-section {
+        background-color: #eaeaea;
+        height: 180px;
+    }
+
+    .share-social-section span {
+        font-size: 13px;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .share-social-section i {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .support-contact-section span {
+        font-size: 13px;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .support-contact-section button {
+        margin: 10px 0;
+    }
+
+  }
