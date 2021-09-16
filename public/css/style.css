@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap');
 
-* {
+.body {
     font-family: 'Montserrat', sans-serif;
+}
+
+.footer-section-1,
+.footer-section-2 {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .feed-heading > span {
@@ -109,6 +114,7 @@
 
 .description-box {
     margin-top: 20px;
+    padding: 20px;
 }
 
 .table td, .table th {
@@ -242,6 +248,7 @@
     background-color: #303030;
     min-height: 713px;
     color: white;
+    font-size: 16px;
 }
 
 .footer-section-1 ul {
@@ -392,4 +399,4 @@
         margin: 10px 0;
     }
 
-  }
+}

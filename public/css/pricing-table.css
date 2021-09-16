@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.card-header.bg-blue-light {
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.product-name {
+    background-color: var(--bs-white) !important;
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.card-pricing-all {
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+.card-pricing-light {
+    border: 1px solid #eaeaea !important;
+}
+
+.card-pricing-blue {
+    border: 2px solid #008FEE !important;
+}
+
+.normal-price {
+    text-decoration: line-through;
+}
+
+.sale-price {
+    font-size: 48px;
+}
+
+sup {
+    top: -22px !important;
+    font-size: 17px !important;
+}
+
+.price {
+    font-size: 3.4em;
+    font-weight: 700;
+}
+
+.user-count {
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.features-product > ul {
+    list-style: none;
+    margin-right: 30px;
+}
+
+.features-product > ul li .value {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.features-product > ul li .value-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.bg-blue-light {
+    background-color: #008FEE !important;
+}
+
+.bg-blue-dark {
+    background-color: #007FDE !important;
+}
+
+.badge-pricing {
+    position: absolute;
+    z-index: 999;
+    margin-left: -9px;
+    margin-top: 21px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card-pricing-all {
+        padding-left:20px !important;
+        padding-right:20px  !important;
+    }
+}
