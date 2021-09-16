@@ -1,64 +1,99 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Logo](https://brojuven.com/wp-content/uploads/2019/01/niagahoster-logo.png)
 
-## About Laravel
+# Online Exam Niagahoster Fullstack Developer
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Prerequisites
+- Laravel 8
+- PHP 7.4
+- Mysql 5.6
+- Apache / Nginx Webserver
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Installation
+### Manual Installation
+1. Clone this Repository to your local webserver
+```sh
+git clone git@github.com:killtdj/test-niagahoster.git  # via SSH
+git clone https://github.com/killtdj/test-niagahoster.git  # via HTTPS
+```
+2. Install Required Dependencies using Composer. If you didn't have composer, you can download and install it first.
+```sh
+composer install
+```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+3. Copy `.env.example` to `.env`
+4. Modify `.env` file
 
-## Learning Laravel
+```js
+DB_CONNECTION=mysql
+DB_HOST=localhost //your mysql host
+DB_PORT=3307 //your mysql port
+DB_DATABASE=niagahoster_db //your database name
+DB_USERNAME=root //your database username
+DB_PASSWORD=root //your database password
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4. Clear config and cache after edit .env
+```sh
+php artisan config:cache
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+5. Migrate to database using PHP Artisan. The migration files is in path `database/migrations`. 
+```sh
+php artisan migrate
+```
 
-## Laravel Sponsors
+6. Seed to Database using PHP Artisan.
+```sh
+php artisan db:seed
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+7. After all done, run your Laravel app with your local server address e.g `localhost/test-niagahoster/public`.
 
-### Premium Partners
+### Docker Installation (Recommended)
+1. Make sure you have installed Docker. If you run in linux OS you also must install docker-compose. All setup you can search via docker official webpage, or any articles.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+2. Clone this Repository to your local webserver
+```sh
+git clone git@github.com:killtdj/test-niagahoster.git  # via SSH
+git clone https://github.com/killtdj/test-niagahoster.git  # via HTTPS
+```
+3. Install Required Dependencies using Composer. If you didn't have composer, you can download and install it first.
+```sh
+composer install
+```
 
-## Contributing
+4. Copy `.env.example` to `.env`
+5. Modify `.env` file. This configuration must be same with your dcoker configuration. You can find the configuration on `docker-compose.yml` on a database section.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```js
+DB_CONNECTION=mysql
+DB_HOST=localhost //your mysql host
+DB_PORT=3307 //your mysql port
+DB_DATABASE=niagahoster_db //your database name
+DB_USERNAME=root //your database username
+DB_PASSWORD=root //your database password
+```
 
-## Code of Conduct
+6. Run docker build using terminal / command prompt.
+```sh
+docker-composer build
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+7. Run docker-composer up
+```sh
+docker-composer up -d
+```
 
-## Security Vulnerabilities
+8. You can check your docker images
+```sh
+docker images
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+9. Make sure if your container is all up. 
+```sh
+docker ps
+```
 
-## License
+10. If you missing a container, you can check all via `docker ps -a`. Check the logs using `docker logs -f <container-name>`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
