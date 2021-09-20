@@ -3,6 +3,13 @@
 
 # Online Exam Niagahoster Fullstack Developer
 
+Demo Webiste [Niagahoster Exam]("https://niagahoster.danuwijaya.live/")
+Published with :
+1.  PHP 7.4
+2.  Nginx
+3.  Lets Encrypt SSL
+4.  Mysql Database
+
 ## Prerequisites
 - Laravel 8
 - PHP 7.4
@@ -50,7 +57,7 @@ php artisan db:seed
 
 7. After all done, run your Laravel app with your local server address e.g `localhost/test-niagahoster/public`.
 
-### Docker Installation (Recommended)
+### Docker Installation (**TBA - On Progress**)
 1. Make sure you have installed Docker. If you run in linux OS you also must install docker-compose. All setup you can search via docker official webpage, or any articles.
 
 2. Clone this Repository to your local webserver

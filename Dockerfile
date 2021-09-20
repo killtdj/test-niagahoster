@@ -1,42 +1,43 @@
-FROM php:7.4-fpm
+FROM php:7.4-fpm-alpine
 
-COPY composer.lock composer.json /var/www/
+COPY composer.lock composer.json /var/www/html/niagahoster/
 
-WORKDIR /var/www
+WORKDIR /var/www/html/niagahoster/niagahoster
 
+RUN apk update && apk add --no-cache \
+    build-base shadow curl \
+    php7 \
+    php7-fpm \
+    php7-common \
+    php7-pdo \
+    php7-pdo_mysql \
+    php7-mysqli \
+    php7-mcrypt \
+    php7-mbstring \
+    php7-xml \
+    php7-openssl \
+    php7-json \
+    php7-phar \
+    php7-zip \
+    php7-gd \
+    php7-dom \
+    php7-session \
+    php7-zlib \
+    php-gettext \ 
+    gettext \
+    nano bash supervisor 
 
-# Install dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    libpng-dev \
-    libzip-dev \
-    libjpeg62-turbo-dev \
-    libfreetype6-dev \
-    locales \
-    zip \
-    jpegoptim optipng pngquant gifsicle \
-    nano \
-    unzip \
-    git \
-    curl
+RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-enable pdo_mysql
 
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# install extensions
-RUN docker-php-ext-install pdo_mysql zip exif pcntl
-
-# install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# add laravel user
-RUN groupadd -g 1000 www
-RUN useradd -u 1000 -ms /bin/bash -g www www
+# Copy existing application directory permissions
+COPY . /var/www/html/niagahoster
 
-# copy project
-COPY . /var/www
-COPY --chown=www:www . /var/www
-RUN chown -R www-data:www-data /var/www
+RUN chown -R www-data:www-data /var/www/html/niagahoster
 
-USER www
-EXPOSE 9000
-CMD [ "php-fpm" ]
+
+# Expose port 9000 and start php-fpm server
+EXPOSE 9008
+CMD ["php-fpm"]
